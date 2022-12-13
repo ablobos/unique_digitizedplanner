@@ -13,12 +13,20 @@ textarea {
   padding: 10px;
 }
 
-#openingheader {
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: orange;
+}
+
+.lead {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.datetime {
+#datetime {
   color: #fff;
   background: #1616be;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

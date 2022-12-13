@@ -20,16 +20,16 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Digital Work Day Scheduler</title>
   </head>
 
-  <body onload="initClock()">
+  <body element onload='initClock()'>
     <header id="openingheader">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <div onload="initClock()" class="datetime">
-        <div class="date">
+      <div id="datetime">
+        <div  class="date">
         <span id="dayname">Day</span>
         <span id="month">Month</span>
         <span id="daynum">00</span>
@@ -136,11 +136,11 @@
               return n;
             }
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            var week = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
-            var ids = ["dayname", "month", "dynum", "year", "hour", "minutes", "seconds", "period"]
+            var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var ids = ["dayname", "month", "dynum", "year", "hour", "minutes", "seconds", "period"];
             var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
             for(var i = 0; i < ids.length; i++)
-            document.getElementbyID(ids[i]).firstChild.nodeValue = values[i];
+            document.getElementByID(ids[i]).firstChild.nodeValue = values[i];
       }
 
 function initClock() {
