@@ -1,5 +1,4 @@
 const events = document.querySelectorAll('.event')
-const now = setInterval(update, 1000);
 
 $(".saveBtn").on("click", function () {
   var textValue = $(this).siblings(".description").val();
@@ -7,11 +6,6 @@ $(".saveBtn").on("click", function () {
   window.localStorage.setItem(divKey, textValue);
 });
 
-events.forEach( event => {
-  const date = dayjs(event.dataset.date).format('MMM')
-  const dateElement = event.querySelector('.date')
-  dateElement.innerText = date
-});
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
